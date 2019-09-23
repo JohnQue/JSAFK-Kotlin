@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item.view.*
 
 class RecyclerAdapter(private val items: ArrayList<ItemData>) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
+    //Inflate 공부가 필요해 보임
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflatedView = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
         return ViewHolder(inflatedView)

@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         randomStudy.setOnClickListener { startActivity<RandomStudyActivity>() }
+        unknown.setOnClickListener{ startActivity<ListActivity>("list" to App.prefs.arr) }
         termination.setOnClickListener {
             alert( "勉強しなきゃいけないことがもっと残ったら頑張ってやってみましょう！", "本当に終了しますか？"){
                 yesButton {

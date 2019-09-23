@@ -8,9 +8,9 @@
     android:background="#cccccc"
     tools:context=".EmptyActivity">
     <TextView
+        android:id="@+id/empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="24dp"
-        android:text="学習した漢字がありません。"/>
+        android:textSize="24dp"/>
 </RelativeLayout>
