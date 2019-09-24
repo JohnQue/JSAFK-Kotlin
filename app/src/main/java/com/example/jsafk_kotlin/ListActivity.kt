@@ -17,10 +17,10 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        val list = intent.getIntegerArrayListExtra("list")
+        val list = intent.getIntegerArrayListExtra("list")!!
         val itemList = ArrayList<ItemData>()
         val size = list.size
-        for (i in 0 until size - 1) itemList.add(getKanji(list[i])!!)
+        for (i in 0 until size) itemList.add(getKanji(list[i])!!)
         val adapter = RecyclerAdapter(itemList)
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager

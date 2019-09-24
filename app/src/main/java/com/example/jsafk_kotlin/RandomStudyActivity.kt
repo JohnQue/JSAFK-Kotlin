@@ -88,14 +88,14 @@ class RandomStudyActivity : AppCompatActivity() {
             val kanjiValue: String = obj.getString("hanza")
             val kanjiArray = JSONArray(kanjiValue)
             while(set.size == hashCount){
-                randomNumber = (Math.random() * 500).toInt() + 1
+                randomNumber = (Math.random() * 600).toInt() + 1
                 set.add(randomNumber)
             }
             hashCount++
             val obj2: JSONObject = kanjiArray.getJSONObject(randomNumber)
             val kanji: String = obj2.getString("kanji")
             baseView.text = kanji
-            count.text = "$hashCount/500"
+            count.text = "$hashCount/600"
         }catch(e : JSONException){
             e.printStackTrace()
         }

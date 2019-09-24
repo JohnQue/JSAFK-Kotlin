@@ -20,7 +20,7 @@ class MySharedPreferences(context: Context){
                 try{
                     val jsonArray = JSONArray(json)
                     val size = jsonArray.length()
-                    for(i in 0 until size-1) list.add(jsonArray.optInt(i))
+                    for(i in 0 until size) list.add(jsonArray.optInt(i))
                 }catch(e: JSONException){
                     e.printStackTrace()
                 }
@@ -31,7 +31,7 @@ class MySharedPreferences(context: Context){
             val size = value.size
             Log.d("check = size : ", size.toString())
             val jsonArray = JSONArray()
-            for(i in 0 until size-1) jsonArray.put(value[i])
+            for(i in 0 until size) jsonArray.put(value[i])
             Log.d("check = Array : ", jsonArray.toString())
             if(value.isNotEmpty()) prefs.edit().putString(PREF_KEY_MY_ARRAY, jsonArray.toString()).apply()
             else prefs.edit().putString(PREF_KEY_MY_ARRAY, null).apply()
